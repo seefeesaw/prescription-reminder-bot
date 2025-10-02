@@ -1,0 +1,44 @@
+{
+  "common": {
+    "yes": "Yebo",
+    "no": "Cha",
+    "cancel": "Khansela",
+    "back": "Emuva",
+    "next": "Okulandelayo",
+    "done": "Kwenziwe",
+    "skip": "Yeqa",
+    "help": "Usizo",
+    "settings": "Izilungiselelo",
+    "taken": "Ngiyithathile",
+    "missed": "Ngiphuthelwe",
+    "snooze": "Phinda emva kwesikhathi"
+  },
+  
+  "medication": {
+    "add": "Engeza umuthi",
+    "edit": "Hlela umuthi",
+    "delete": "Susa umuthi",
+    "pause": "Misa izikhumbuzi",
+    "resume": "Qhubeka nezikhumbuzi",
+    "refill": "Kudingeka ukugcwalisa",
+    "nicknames": {
+      "morning": "Umuthi wasekuseni",
+      "evening": "Umuthi wakusihlwa",
+      "vitamin": "Ivithamini yansuku zonke",
+      "white": "Iphilisi elimhlophe",
+      "blue": "Iphilisi eliluhlaza"
+    }
+  },
+  
+  "reminders": {
+    "taken": "✅ Ngiyithathile",
+    "snooze": "⏰ Phinda emva kwemizuzu engu-30",
+    "skip": "❌ Yeqa namhlanje",
+    "responses": {
+      "great": "Wenze kahle!",
+      "snoozed": "Ngizokukhumbuzaemva kwemizuzu engu-30",
+      "skipped": "Kulungile, ngiyeqa umthamo wanamhlanje",
+      "missed": "Ngicela uzame ukuyithatha ngokushesha"
+    }
+  }
+}

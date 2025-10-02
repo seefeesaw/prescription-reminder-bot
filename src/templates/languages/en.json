@@ -1,0 +1,56 @@
+{
+  "common": {
+    "yes": "Yes",
+    "no": "No",
+    "cancel": "Cancel",
+    "back": "Back",
+    "next": "Next",
+    "done": "Done",
+    "skip": "Skip",
+    "help": "Help",
+    "settings": "Settings",
+    "taken": "Taken",
+    "missed": "Missed",
+    "snooze": "Snooze"
+  },
+  
+  "medication": {
+    "add": "Add medication",
+    "edit": "Edit medication",
+    "delete": "Delete medication",
+    "pause": "Pause reminders",
+    "resume": "Resume reminders",
+    "refill": "Refill needed",
+    "nicknames": {
+      "morning": "Morning medicine",
+      "evening": "Evening medicine",
+      "vitamin": "Daily vitamin",
+      "white": "White pill",
+      "blue": "Blue pill"
+    }
+  },
+  
+  "reminders": {
+    "taken": "✅ Taken",
+    "snooze": "⏰ Snooze 30min",
+    "skip": "❌ Skip today",
+    "responses": {
+      "great": "Great job!",
+      "snoozed": "I'll remind you in 30 minutes",
+      "skipped": "Okay, skipping today's dose",
+      "missed": "Please try to take it as soon as possible"
+    }
+  },
+  
+  "errors": {
+    "notFound": "I couldn't find that",
+    "invalidInput": "I didn't understand that. Please try again",
+    "imageError": "I couldn't read that image. Please try again with better lighting",
+    "networkError": "Network error. Please try again"
+  },
+  
+  "help": {
+    "menu": "Here's what I can do:\n\n📸 Upload prescription - Send a photo\n➕ Add medication - Type 'add [name]'\n📊 Check status - Type 'status'\n⏸ Pause reminders - Type 'pause'\n▶️ Resume reminders - Type 'resume'\n👥 Add caregiver - Type 'caregiver'\n⚙️ Settings - Type 'settings'",
+    "quickResponses": "Quick responses for reminders:\n✅ Taken / Done\n⏰ Snooze\n❌ Skip"
+  }
+}
