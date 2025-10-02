@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: prescription-bot
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - MONGODB_URI=mongodb://mongo:27017/prescription-bot
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - mongo
+      - redis
+    volumes:
+      - ./uploads:/app/uploads
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - prescription-network
+
+  mongo:
+    image: mongo:6
+    container_name: prescription-mongo
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=secret
+      - MONGO_INITDB_DATABASE=prescription-bot
+    volumes:
+      - mongo-data:/data/db
+      - ./scripts/mongo-init.js:/docker-entrypoint-initdb.d/init.js
+    networks:
+      - prescription-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: prescription-redis
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+    volumes:
+      - redis-data:/data
+    networks:
+      - prescription-network
+
+  ngrok:
+    image: ngrok/ngrok:latest
+    container_name: prescription-ngrok
+    command: http app:3000
+    environment:
+      - NGROK_AUTHTOKEN=${NGROK_TOKEN}
+    ports:
+      - "4040:4040"
+    networks:
+      - prescription-network
+
+networks:
+  prescription-network:
+    driver: bridge
+
+volumes:
+  mongo-data:
+  redis-data:
